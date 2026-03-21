@@ -1,392 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Harshil Bhakta | Portfolio</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
+    <meta
+        name="description"
+        content="Portfolio homepage for Harshil Bhakta, a software engineer focused on backend systems, full-stack apps, and polished digital experiences."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<body class="home-page">
+    <div class="page-shell">
+        <div class="ambient ambient-left"></div>
+        <div class="ambient ambient-right"></div>
+        <div class="ambient ambient-center"></div>
 
-<body>
+        <header class="site-header">
+            <a class="brand" href="index.html">Harshil Bhakta</a>
 
-    <!-- NAVBAR -->
-    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <nav class="site-nav" aria-label="Primary">
+                <a class="active" href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+            </nav>
 
-        <div class="uk-container">
+            <a class="nav-cta" href="contact.html">Hire Me</a>
+        </header>
 
-            <div uk-navbar>
+        <main class="hero-layout">
+            <section class="hero-copy">
+                <p class="eyebrow">Software Engineer / Austin, Texas</p>
+                <h1>
+                    I'm
+                    <span>Harshil Bhakta</span>
+                </h1>
+                <p class="intro">
+                    Computer Science graduate with hands-on experience building full-stack web applications,
+                    AI-powered tools, and high-performance computing systems. Skilled in JavaScript, Python,
+                    C/C++, React, Tailwind CSS, PostgreSQL, REST APIs, and cloud-based tooling, with project
+                    experience in POSIX threads, CUDA GPU programming, and distributed systems using MPI.
+                    Focused on designing efficient software, solving complex technical problems, and building
+                    real-world applications that improve user experience and operational efficiency.
+                </p>
 
-                <!-- CENTER NAV -->
-                <div class="uk-navbar-center">
-
-                    <ul class="uk-navbar-nav">
-
-                        <li class="uk-active">
-                            <a href="index.html">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="projects.html">Projects</a>
-                        </li>
-
-                        <li>
-                            <a href="work.html">Work</a>
-                        </li>
-
-                    </ul>
-
+                <div class="hero-actions">
+                    <a class="button button-primary" href="projects.html">View Projects</a>
+                    <a class="button button-secondary" href="contact.html">Contact Me</a>
                 </div>
 
-            </div>
-
-        </div>
-
-    </nav>
-
-    <!-- HERO -->
-    <section class="uk-section uk-section-small uk-section-default uk-text-center">
-
-        <div class="uk-container uk-container-small">
-
-            <img
-                src="images/profile.jpg"
-                class="uk-border-circle uk-box-shadow-large uk-margin-bottom"
-                style="width:220px;height:220px;object-fit:cover;"
-            >
-
-            <h1 class="uk-heading-medium uk-margin-small-bottom">
-                Harshil Bhakta
-            </h1>
-
-            <div class="uk-text-muted uk-margin-small uk-flex uk-flex-center uk-flex-wrap uk-flex-middle uk-gap-small">
-
-                <div class="uk-flex uk-flex-middle uk-margin-small-right">
-                    <span uk-icon="location" class="uk-margin-small-right"></span>
-                    Austin, Texas
+                <div class="social-row" aria-label="Social links">
+                    <a
+                        class="social-icon-link"
+                        href="https://github.com/Hbhakta02"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="GitHub"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.866-.013-1.699-2.782.605-3.369-1.344-3.369-1.344-.455-1.157-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.004.071 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.221-.253-4.556-1.113-4.556-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.31.678.92.678 1.855 0 1.339-.012 2.419-.012 2.747 0 .269.18.58.688.481A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z"/>
+                        </svg>
+                    </a>
+                    <a
+                        class="social-icon-link"
+                        href="https://www.linkedin.com/in/harshil-bhakta-37b4181b7/"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 0 0 3.28 4.97c0 1.09.88 1.97 1.94 1.97h.03A1.97 1.97 0 1 0 5.25 3ZM20.44 13.08c0-3.47-1.85-5.08-4.32-5.08-1.99 0-2.88 1.1-3.38 1.87V8.5H9.37c.04.91 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.68.12-.92.27-.68.88-1.39 1.91-1.39 1.35 0 1.89 1.03 1.89 2.54V20H20v-6.92l.44-.01Z"/>
+                        </svg>
+                    </a>
+                    <button class="social-reveal" type="button" data-contact-toggle aria-expanded="false">
+                        <span class="social-icon-link" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6.62 10.79a15.054 15.054 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 4a1 1 0 0 1 1-1h3.49a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.24 1.01l-2.2 2.22Z"/>
+                            </svg>
+                        </span>
+                        <span class="social-reveal-text">575-214-1100</span>
+                    </button>
+                    <button class="social-reveal" type="button" data-contact-toggle aria-expanded="false">
+                        <span class="social-icon-link" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v.01L12 13l8-5.99V7H4Zm16 10V9.5l-7.4 5.55a1 1 0 0 1-1.2 0L4 9.5V17h16Z"/>
+                            </svg>
+                        </span>
+                        <span class="social-reveal-text">harbhakt02@gmail.com</span>
+                    </button>
                 </div>
+            </section>
 
-                <div class="uk-flex uk-flex-middle uk-margin-small-right">
-                    <span uk-icon="mail" class="uk-margin-small-right"></span>
-                    harbhakt02@gmail.com
-                </div>
-
-                <div class="uk-flex uk-flex-middle uk-margin-small-right">
-                    <span uk-icon="receiver" class="uk-margin-small-right"></span>
-                    575-214-1100
-                </div>
-
-            </div>
-
-            <div class="uk-margin-small-top">
-
-                <a href="https://github.com/Hbhakta02" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="github"></a>
-
-                <a href="https://www.linkedin.com/in/harshil-bhakta-37b4181b7/" target="_blank" class="uk-icon-button" uk-icon="linkedin"></a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section class="uk-section uk-section-small uk-section-default">
-
-        <div class="uk-container uk-container-small">
-
-            <h2 class="uk-heading-line uk-text-center">
-                <span>About Me</span>
-            </h2>
-
-            <div class="uk-text-center uk-margin-medium-top uk-text-lead">
-                Computer Science graduate from Texas Tech University passionate about
-                building scalable systems and clean software solutions. My interests
-                include backend development, database systems, and full-stack web
-                applications.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-    <section class="uk-section uk-section-small uk-section-default">
-
-        <div class="uk-container">
-
-            <h2 class="uk-heading-medium">Education</h2>
-
-            <div class="uk-flex uk-flex-middle uk-grid-small uk-margin-small-top" uk-grid>
-
-                <div class="uk-width-auto">
-                    <img src="images/texastech.png" width="90">
-                </div>
-
-                <div class="uk-width-expand">
-
-                    <h3>Texas Tech University</h3>
-
-                    <p>
-                        <strong>Dates:</strong> Aug 2021 — May 2025<br>
-                        <strong>Major:</strong> Computer Science<br>
-                        <strong>Minor:</strong> Mathematics<br>
-                        <strong>Study Abroad:</strong> Rome, Italy<br>
-                        <strong>Relevant Coursework: </strong>Data Structures, Object-Oriented Programming, Software Engineering, Computer Networks, Parallel Programming, Database Systems, Operating Systems, Programming Paradigms, Computer Architecture
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CERTIFICATIONS -->
-    <section class="uk-section uk-section-small uk-section-muted">
-
-        <div class="uk-container uk-container-small">
-
-            <h2 class="uk-heading-medium">Certifications</h2>
-
-            <div class="uk-grid-small uk-child-width-1-3@m uk-child-width-1-2@s uk-margin-small-top" uk-grid>
-
-                <div>
-                    <div class="uk-text-center cert-card">
-                        <img
-                            src="images/certs/AWS.jpg"
-                            style="height:160px; width:100%; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-                        <h4 class="uk-margin-remove">
-                            AWS Cloud Support Associate
-                        </h4>
+            <section class="hero-visual" aria-label="Profile highlight">
+                <div class="hero-panel">
+                    <div class="portrait-frame">
+                        <div class="portrait-card">
+                            <img src="images/profile.jpg" alt="Portrait of Harshil Bhakta">
+                        </div>
                     </div>
                 </div>
+            </section>
+        </main>
 
-                <div>
-                    <div class="uk-text-center cert-card">
-                        <img
-                            src="images/certs/IBM.jpg"
-                            style="height:160px; width:100%; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-                        <h4 class="uk-margin-remove">
-                            IBM Full Stack JavaScript Developer
-                        </h4>
+        <section class="stats-strip" aria-label="Highlights">
+            <article class="education-highlight-card">
+                <div class="education-highlight-head">
+                    <div>
+                        <strong>Texas Tech University</strong>
+                        <span class="education-highlight-date">August 2021 - May 2025</span>
                     </div>
+                    <img src="images/texastech.png" alt="Texas Tech University logo" class="education-highlight-logo">
                 </div>
-
-                <div>
-                    <div class="uk-text-center cert-card">
-                        <img
-                            src="images/certs/Microsoft.jpg"
-                            style="height:160px; width:100%; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-                        <h4 class="uk-margin-remove">
-                            Microsoft Python Development
-                        </h4>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROGRAMMING LANGUAGES -->
-    <section class="uk-section uk-section-small uk-section-muted">
-
-        <div class="uk-container uk-container-small">
-
-            <h2 class="uk-heading-medium uk-text-center">Programming Languages</h2>
-
-            <div class="uk-grid-small uk-child-width-1-3@m uk-child-width-1-2@s uk-margin-small-top" uk-grid>
-
-                <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/C.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            C
-                        </h4>
-
-                    </div>
-                </div>
-
-                <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/C++.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            C++
-                        </h4>
-
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/Python.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            Python
-                        </h4>
-
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/HTML.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            HTML
-                        </h4>
-
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/CSS.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            CSS
-                        </h4>
-
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/SQL.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            SQL
-                        </h4>
-
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/Java.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            Java
-                        </h4>
-
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/Javascript.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            JavaScript
-                        </h4>
-
-                    </div>
-                </div>
-
-                 <div>
-                    <div class="uk-text-center">
-
-                        <img
-                            src="images/code/ReactJS.png"
-                            style="height:70px; object-fit:contain;"
-                            class="uk-margin-bottom"
-                        >
-
-                        <h4 class="uk-margin-remove">
-                            ReactJS
-                        </h4>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-    <section class="uk-section uk-section-small uk-section-muted">
-
-        <div class="uk-container uk-container-small">
-
-            <h3 class="uk-margin-medium-top">Skills</h3>
-
-            <p>
-                Data Analysis, Performance Testing, Algorithm Optimization, Systems Debugging
-            </p>
-
-            <h3 class="uk-margin-medium-top">Interests</h3>
-
-            <p>
-                Traveling, Music, Basketball
-            </p>
-
-        </div>
-
-    </section>
-
+                <span>B.S. in Computer Science</span>
+                <span>Minor in Mathematics</span>
+            </article>
+            <article class="cert-highlight-card">
+                <strong>Study Abroad + Coursework</strong>
+                <span>Study Abroad Experience in Rome, Italy</span>
+                <span>Relevant Coursework: Data Structures, OOP, Software Engineering, Computer Networks</span>
+                <span>Parallel Programming, Database Systems, Operating Systems, Programming Paradigms, Computer Architecture</span>
+            </article>
+            <article class="cert-highlight-card">
+                <strong>3 Certifications</strong>
+                <span>IBM Full-Stack JavaScript Developer</span>
+                <span>AWS Cloud Support Associate</span>
+                <span>Microsoft Python Development</span>
+                <a class="stats-link-button" href="about.html#certifications">View Certifications</a>
+            </article>
+            <article>
+                <strong>Roles Interested In</strong>
+                <span>Software Engineer, Frontend Developer, System Engineer, Back End Developer, and Full Stack Developer roles</span>
+            </article>
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll("[data-contact-toggle]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const expanded = button.getAttribute("aria-expanded") === "true";
+                button.setAttribute("aria-expanded", expanded ? "false" : "true");
+                button.classList.toggle("active", !expanded);
+            });
+        });
+    </script>
 </body>
 </html>

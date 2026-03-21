@@ -1,236 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Project | Harshil Bhakta</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
+    <meta
+        name="description"
+        content="Detailed project view for Harshil Bhakta portfolio projects."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+<body class="project-detail-page">
+    <div class="page-shell project-detail-shell">
+        <div class="ambient ambient-left"></div>
+        <div class="ambient ambient-right"></div>
+        <div class="ambient ambient-center"></div>
 
-<body>
+        <header class="site-header">
+            <a class="brand" href="index.html">Harshil Bhakta</a>
 
-<!-- NAVBAR -->
-<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a class="active" href="projects.html">Projects</a>
+            </nav>
 
-    <div class="uk-container">
+            <a class="nav-cta" href="contact.html">Hire Me</a>
+        </header>
 
-        <div uk-navbar>
+        <main class="project-detail-layout">
+            <a href="projects.html" class="back-link">Back to Projects</a>
 
-            <!-- CENTER NAV -->
-            <div class="uk-navbar-center">
+            <section class="project-detail-hero">
+                <div class="project-detail-copy">
+                    <p class="eyebrow">Project Detail</p>
+                    <h1 id="project-title">Loading project...</h1>
+                    <p id="project-summary" class="project-summary-text"></p>
+                    <div id="project-stack" class="project-tag-row"></div>
+                    <div class="hero-actions">
+                        <a id="github-link" class="button button-primary" href="#" target="_blank" rel="noreferrer">View GitHub</a>
+                    </div>
+                </div>
 
-                <ul class="uk-navbar-nav">
+                <div class="project-detail-visual">
+                    <img id="project-image" class="project-detail-image" alt="">
+                </div>
+            </section>
 
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
+            <section class="project-detail-content">
+                <article class="project-content-card">
+                    <p class="experience-date">Overview</p>
+                    <div id="project-description" class="project-detail-description"></div>
+                </article>
 
-                    <li class="uk-active">
-                        <a href="projects.html">Projects</a>
-                    </li>
-
-                    <li>
-                        <a href="work.html">Work</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
+                <section>
+                    <p class="experience-date">Gallery</p>
+                    <div id="project-gallery" class="project-gallery-grid"></div>
+                </section>
+            </section>
+        </main>
     </div>
 
-</nav>
+    <script>
+        const projects = {
+            pms: {
+                title: "Performance Management System",
+                summary: "Full-stack application for employee performance tracking, dashboards, and reporting workflows.",
+                image: "images/projects/pms1.png",
+                gallery: [
+                    "images/projects/pms2.png",
+                    "images/projects/pms3.png",
+                    "images/projects/pms4.png"
+                ],
+                stack: ["HTML", "CSS", "JavaScript", "SQL"],
+                description: `
+                    <p>
+                        A full-stack web application built to manage employee performance tracking,
+                        review workflows, and reporting dashboards in one central system.
+                    </p>
+                    <ul>
+                        <li>Tracks employee performance data in a structured way.</li>
+                        <li>Provides managers with dashboards and reporting views.</li>
+                        <li>Supports admin workflows for visibility into organizational productivity.</li>
+                    </ul>
+                    <p>
+                        This project focused on combining a usable interface with practical business logic
+                        and database-backed reporting.
+                    </p>
+                `,
+                github: "https://github.com/Hbhakta02/travelRecommendation"
+            },
+            movie: {
+                title: "Movie Booking Platform",
+                summary: "Responsive movie discovery and booking experience built around dynamic browsing and UI polish.",
+                image: "images/projects/movie1.png",
+                gallery: [
+                    "images/projects/movie2.png",
+                    "images/projects/movie3.png",
+                    "images/projects/movie4.png"
+                ],
+                stack: ["React", "Tailwind CSS", "TMDB API"],
+                description: `
+                    <p>
+                        A React-based movie platform that allows users to browse films, search titles,
+                        explore details, and move through a booking-oriented interface.
+                    </p>
+                    <ul>
+                        <li>Includes search and filtering for easier movie discovery.</li>
+                        <li>Uses a responsive UI built around modern front-end patterns.</li>
+                        <li>Highlights featured content with strong visual presentation.</li>
+                    </ul>
+                    <p>
+                        The project emphasized front-end structure, reusable components, and a smooth user flow.
+                    </p>
+                `,
+                github: "https://github.com/Hbhakta02/seat-nerd-frontend"
+            },
+            disaster: {
+                title: "Disaster Relief Coordination System",
+                summary: "Database-driven system for managing volunteers, resources, and emergency supply distribution.",
+                image: "images/projects/Heart1.png",
+                gallery: [
+                    "images/projects/Heart2.png",
+                    "images/projects/Heart3.png",
+                    "images/projects/Heart4.png"
+                ],
+                stack: ["SQL", "Database Design", "Backend Logic"],
+                description: `
+                    <p>
+                        A coordination system designed to support emergency response efforts through structured
+                        data, resource tracking, and volunteer management.
+                    </p>
+                    <ul>
+                        <li>Organizes volunteer records and allocation workflows.</li>
+                        <li>Tracks supplies and distribution logistics.</li>
+                        <li>Supports relief planning through database-centered design.</li>
+                    </ul>
+                    <p>
+                        This build focused on solving an operational problem through clear schema design
+                        and practical backend thinking.
+                    </p>
+                `,
+                github: "https://github.com/Hbhakta02/fullstack-capstone-project"
+            },
+            llm: {
+                title: "LLM AI Assistant",
+                summary: "Python-based assistant using local LLMs for text workflows, automation, and command handling.",
+                image: "images/projects/LLM1.png",
+                gallery: [
+                    "images/projects/LLM2.png",
+                    "images/projects/LLM3.png",
+                    "images/projects/LLM4.png"
+                ],
+                stack: ["Python", "Local LLMs", "NLP"],
+                description: `
+                    <p>
+                        A locally powered AI assistant built to handle automated responses, text analysis,
+                        and task-oriented command processing.
+                    </p>
+                    <ul>
+                        <li>Integrates local large language models into a usable workflow.</li>
+                        <li>Supports summarization and text-processing style tasks.</li>
+                        <li>Explores practical AI tooling beyond simple chat interactions.</li>
+                    </ul>
+                    <p>
+                        The project centered on applying LLM capabilities in a more hands-on engineering context.
+                    </p>
+                `,
+                github: "https://github.com/Hbhakta02/STE-Text-Conversion"
+            }
+        };
 
-<section class="uk-section uk-section-small uk-section-default">
+        const params = new URLSearchParams(window.location.search);
+        const projectName = params.get("name");
+        const project = projects[projectName];
 
-<div class="uk-container uk-container-small">
+        const title = document.getElementById("project-title");
+        const summary = document.getElementById("project-summary");
+        const image = document.getElementById("project-image");
+        const stack = document.getElementById("project-stack");
+        const description = document.getElementById("project-description");
+        const gallery = document.getElementById("project-gallery");
+        const githubLink = document.getElementById("github-link");
 
-<a href="projects.html" class="uk-button uk-button-text uk-margin-bottom">
-← Back to Projects
-</a>
+        if (!project) {
+            title.textContent = "Project not found";
+            summary.textContent = "The requested project could not be loaded.";
+            image.remove();
+            githubLink.style.display = "none";
+        } else {
+            document.title = `${project.title} | Harshil Bhakta`;
+            title.textContent = project.title;
+            summary.textContent = project.summary;
+            image.src = project.image;
+            image.alt = project.title;
+            description.innerHTML = project.description;
+            githubLink.href = project.github;
 
-<h1 id="project-title" class="uk-heading-medium"></h1>
+            stack.innerHTML = "";
+            project.stack.forEach((item) => {
+                const tag = document.createElement("span");
+                tag.textContent = item;
+                stack.appendChild(tag);
+            });
 
-<img
-    id="project-image"
-    class="project-hero-img uk-margin-medium-top uk-margin-medium-bottom"
->
-<div id="project-gallery" class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-3@m uk-margin-bottom" uk-grid></div>
+            gallery.innerHTML = "";
+            project.gallery.forEach((src) => {
+                const frame = document.createElement("div");
+                frame.className = "project-gallery-card";
 
-<div id="project-description" class="project-description"></div>
+                const img = document.createElement("img");
+                img.src = src;
+                img.alt = `${project.title} screenshot`;
 
-<div class="uk-margin-large-top">
-
-<a id="github-link"
-   class="uk-button uk-button-primary uk-margin-right"
-   target="_blank">
-View GitHub
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<script>
-
-const projects = {
-
-pms: {
-title: "Performance Management System",
-image: "images/projects/pms1.png",
-gallery: [
-"images/projects/pms2.png",
-"images/projects/pms3.png",
-"images/projects/pms4.png"
-],
-description: `
-<p>
-A full‑stack web application used to manage employee performance tracking,
-reviews, and reporting dashboards.
-</p>
-
-<p>
-Features include:
-</p>
-
-<ul>
-<li>Employee performance tracking</li>
-<li>Manager dashboards</li>
-<li>Secure login system</li>
-<li>Dynamic reporting tools</li>
-</ul>
-
-<p><strong>Tech Stack:</strong> Node.js, Express, SQL, HTML, CSS, JavaScript</p>
-`,
-github: "https://github.com/Hbhakta02/travelRecommendation",
-},
-
-movie: {
-title: "Movie Booking Platform",
-image: "images/projects/movie1.png",
-gallery: [
-"images/projects/movie2.png",
-"images/projects/movie3.png",
-"images/projects/movie4.png"
-],
-description: `
-<p>
-A React-based movie discovery and booking platform that allows users to
-browse movies, search titles, and view showtimes.
-</p>
-
-<p><strong>Features:</strong></p>
-
-<ul>
-<li>Dynamic movie search</li>
-<li>Hero carousel with featured films</li>
-<li>Movie details page</li>
-<li>Responsive UI</li>
-</ul>
-
-<p><strong>Tech Stack:</strong> React, Tailwind, TMDB API</p>
-`,
-github: "https://github.com/Hbhakta02/seat-nerd-frontend",
-},
-
-disaster: {
-title: "Disaster Relief Coordination System",
-image: "images/projects/heart1.png",
-gallery: [
-"images/projects/heart1.png",
-"images/projects/heart2.png"
-],
-description: `
-<p>
-A database-driven system designed to coordinate disaster relief logistics,
-including volunteer management, resource allocation, and location tracking.
-</p>
-
-<ul>
-<li>Volunteer management system</li>
-<li>Supply distribution tracking</li>
-<li>Resource allocation database</li>
-</ul>
-
-<p><strong>Tech Stack:</strong> SQL, Database Design, Backend Logic</p>
-`,
-github: "https://github.com/Hbhakta02/fullstack-capstone-project",
-},
-
-llm: {
-title: "LLM AI Assistant",
-image: "images/projects/llm1.png",
-gallery: [
-"images/projects/llm1.png",
-"images/projects/llm2.png"
-],
-description: `
-<p>
-A Python-based AI assistant built using local large language models to perform
-text analysis, automated responses, and task execution.
-</p>
-
-<ul>
-<li>Local LLM integration</li>
-<li>Command processing</li>
-<li>Text summarization</li>
-</ul>
-
-<p><strong>Tech Stack:</strong> Python, LLaMA, NLP</p>
-`,
-github: "https://github.com/Hbhakta02/STE-Text-Conversion",
-}
-
-};
-
-const params = new URLSearchParams(window.location.search);
-const projectName = params.get("name");
-
-const project = projects[projectName];
-
-if (project) {
-
-document.getElementById("project-title").innerText = project.title;
-
-document.getElementById("project-image").src = project.image;
-
-const gallery = document.getElementById("project-gallery");
-gallery.innerHTML = "";
-
-if (project.gallery) {
-project.gallery.forEach(img => {
-const div = document.createElement("div");
-div.innerHTML = `
-<img src="${img}" style="width:100%; border-radius:10px;">
-`;
-gallery.appendChild(div);
-});
-}
-
-document.getElementById("project-description").innerHTML = project.description;
-
-document.getElementById("github-link").href = project.github;
-
-document.getElementById("demo-link").href = project.demo;
-
-} else {
-
-document.getElementById("project-title").innerText = "Project Not Found";
-
-}
-
-</script>
-
+                frame.appendChild(img);
+                gallery.appendChild(frame);
+            });
+        }
+    </script>
 </body>
 </html>
