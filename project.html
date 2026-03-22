@@ -48,8 +48,19 @@
                     </div>
                 </div>
 
-                <div class="project-detail-visual">
-                    <img id="project-image" class="project-detail-image" alt="">
+                <div class="project-detail-gallery-shell">
+                    <div class="project-detail-gallery-head">
+                        <button class="project-arrow" type="button" aria-label="Previous image" data-gallery-nav="prev">&#8592;</button>
+                        <p class="project-counter" aria-live="polite">
+                            <span data-gallery-current>1</span>
+                            <span>/</span>
+                            <span data-gallery-total>1</span>
+                        </p>
+                        <button class="project-arrow" type="button" aria-label="Next image" data-gallery-nav="next">&#8594;</button>
+                    </div>
+                    <div class="project-detail-visual">
+                        <img id="project-image" class="project-detail-image" alt="">
+                    </div>
                 </div>
             </section>
 
@@ -58,11 +69,6 @@
                     <p class="experience-date">Overview</p>
                     <div id="project-description" class="project-detail-description"></div>
                 </article>
-
-                <section>
-                    <p class="experience-date">Gallery</p>
-                    <div id="project-gallery" class="project-gallery-grid"></div>
-                </section>
             </section>
         </main>
     </div>
@@ -103,7 +109,12 @@
                 gallery: [
                     "images/projects/movie2.png",
                     "images/projects/movie3.png",
-                    "images/projects/movie4.png"
+                    "images/projects/movie4.png",
+                    "images/projects/movie5.png",
+                    "images/projects/movie6.png",
+                    "images/projects/movie7.png",
+                    "images/projects/movie8.png",
+
                 ],
                 stack: ["React", "Tailwind CSS", "TMDB API"],
                 description: `
@@ -120,7 +131,7 @@
                         The project emphasized front-end structure, reusable components, and a smooth user flow.
                     </p>
                 `,
-                github: "https://github.com/Hbhakta02/seat-nerd-frontend"
+                github: "https://github.com/Hbhakta02/MovieBookingPlatform.git"
             },
             disaster: {
                 title: "Disaster Relief Coordination System",
@@ -129,7 +140,10 @@
                 gallery: [
                     "images/projects/Heart2.png",
                     "images/projects/Heart3.png",
-                    "images/projects/Heart4.png"
+                    "images/projects/Heart4.png",
+                    "images/projects/Heart5.png",
+                    "images/projects/Heart6.png",
+                    "images/projects/Heart7.png"
                 ],
                 stack: ["SQL", "Database Design", "Backend Logic"],
                 description: `
@@ -156,7 +170,8 @@
                 gallery: [
                     "images/projects/LLM2.png",
                     "images/projects/LLM3.png",
-                    "images/projects/LLM4.png"
+                    "images/projects/LLM4.png",
+                    "images/projects/LLM5.png"
                 ],
                 stack: ["Python", "Local LLMs", "NLP"],
                 description: `
@@ -186,8 +201,25 @@
         const image = document.getElementById("project-image");
         const stack = document.getElementById("project-stack");
         const description = document.getElementById("project-description");
-        const gallery = document.getElementById("project-gallery");
         const githubLink = document.getElementById("github-link");
+        const currentGalleryItem = document.querySelector("[data-gallery-current]");
+        const totalGalleryItems = document.querySelector("[data-gallery-total]");
+        let activeGalleryIndex = 0;
+        let galleryImages = [];
+
+        const showGalleryImage = (index) => {
+            if (!galleryImages.length) {
+                return;
+            }
+
+            activeGalleryIndex = (index + galleryImages.length) % galleryImages.length;
+            image.src = galleryImages[activeGalleryIndex];
+            image.alt = `${project.title} screenshot ${activeGalleryIndex + 1}`;
+
+            if (currentGalleryItem) {
+                currentGalleryItem.textContent = String(activeGalleryIndex + 1);
+            }
+        };
 
         if (!project) {
             title.textContent = "Project not found";
@@ -198,10 +230,9 @@
             document.title = `${project.title} | Harshil Bhakta`;
             title.textContent = project.title;
             summary.textContent = project.summary;
-            image.src = project.image;
-            image.alt = project.title;
             description.innerHTML = project.description;
             githubLink.href = project.github;
+            galleryImages = [project.image, ...project.gallery];
 
             stack.innerHTML = "";
             project.stack.forEach((item) => {
@@ -210,19 +241,19 @@
                 stack.appendChild(tag);
             });
 
-            gallery.innerHTML = "";
-            project.gallery.forEach((src) => {
-                const frame = document.createElement("div");
-                frame.className = "project-gallery-card";
+            if (totalGalleryItems) {
+                totalGalleryItems.textContent = String(galleryImages.length);
+            }
 
-                const img = document.createElement("img");
-                img.src = src;
-                img.alt = `${project.title} screenshot`;
-
-                frame.appendChild(img);
-                gallery.appendChild(frame);
-            });
+            showGalleryImage(0);
         }
+
+        document.querySelectorAll("[data-gallery-nav]").forEach((button) => {
+            button.addEventListener("click", () => {
+                const direction = button.dataset.galleryNav === "next" ? 1 : -1;
+                showGalleryImage(activeGalleryIndex + direction);
+            });
+        });
     </script>
 </body>
 </html>
